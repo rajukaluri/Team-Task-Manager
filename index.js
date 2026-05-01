@@ -7,17 +7,25 @@ const projectTaskRoutes = require('./routes/projectTask');
 
 const app = express();
 
-// 1. THIS LINE IS CRITICAL - It must be placed before the routes
+// 1. Critical Middleware
 app.use(cors());
-app.use(express.json()); // <--- Ensure this line is present here
+app.use(express.json());
 
-// 2. Define routes after the middleware
+// 2. Default Root Route Added Below
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Welcome to the Team Task Manager API!',
+    status: 'Active and running',
+  });
+});
+
+// 3. Define routes after the middleware
 app.use('/api/auth', authRoutes);
 app.use('/api', projectTaskRoutes);
 
 // Database Connection and Server Start
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("Connected to Database"))
+  .then(() => console.log('Connected to Database'))
   .catch(err => console.error(err));
 
 const PORT = process.env.PORT || 5000;
