@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/:match*",
+      "destination": "https://team-task-manager-production-e5fe.up.railway.app/api/:match*"
+    }
+  ]
+}
