@@ -1,22 +1,16 @@
 import axios from 'axios';
 
-// Initialize the base URL for your backend API
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://your-backend-service.up.railway.app/api', // <-- Your Railway live URL
 });
 
-// Automatically attach the authorization token to every request
 API.interceptors.request.use((req) => {
-  // Using the hardcoded token provided
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjRlOTM0NDBlNDg4YmQyZjkxNzU4YSIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTc3NzY1ODYzMiwiZXhwIjoxNzc3NzQ1MDMyfQ.NAzy7DsQxAnFLBtsiwSnxMkfXIchpE26O0Ukn3mpv9M";
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjRlOTM0NDBlNDg4YmQyZjkxNzU4YSIsInR5cCI6IkFkbWluIiwiaWF0IjoxNzc3NjY4NjMyLCJleHAiOjE3Nzc3NDUwMzJ9.NAzy7DsQxAnFLBtsiwSnxMkfXIchpE26O0Ukn3mpv9M";
   
   if (token) {
     req.headers.Authorization = `Bearer ${token}`;
   }
-  
-  // Set default content type
   req.headers['Content-Type'] = 'application/json';
-  
   return req;
 });
 
