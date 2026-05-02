@@ -1,4 +1,4 @@
- #🚀 Team Task Manager
+ # Team Task Manager
 A full-stack, AI-ready MERN (MongoDB, Express, React, Node.js) task management application. This project is optimized for MERN architecture, deployment on Railway and Vercel, and scalable backend/frontend integration.
 
 🛠️ Technology Stack
@@ -16,8 +16,8 @@ Database: MongoDB, Mongoose
 
 Authentication: JWT (JSON Web Tokens), bcryptjs
 
- #Deployment Platforms: Railway (Backend), Vercel (Frontend)
- #📦 Project Structure
+ Deployment Platforms: Railway (Backend), Vercel (Frontend)
+ 📦 Project Structure
 Plaintext
 team-task-manager/
 ├── frontend/                 # React frontend application
