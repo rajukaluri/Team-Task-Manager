@@ -17,6 +17,7 @@ Database: MongoDB, Mongoose
 Authentication: JWT (JSON Web Tokens), bcryptjs
 
  Deployment Platforms: Railway (Backend), Vercel (Frontend)
+ 
  📦 Project Structure
 Plaintext
 team-task-manager/
@@ -30,7 +31,7 @@ team-task-manager/
 ├── vercel.json               
 ├── package.json              
 └── README.md
----
+
 ⚙️ Configuration & Environment Setup
 Prerequisites
 Make sure you have Node.js (v18+ recommended) and MongoDB installed locally or access to MongoDB Atlas.
