@@ -20,15 +20,15 @@ Authentication: JWT (JSON Web Tokens), bcryptjs
  📦 Project Structure
 Plaintext
 team-task-manager/
-├── frontend/                 # React frontend application
-│   ├── src/                  # Application source code
-│   │   └── services/         # API & Axios configuration
+├── frontend/                 
+│   ├── src/                  
+│   │   └── services/         
 │   ├── package.json
 │   └── ...
-├── routes/                   # Backend API routes
-├── index.js                  # Main server entry point
-├── vercel.json               # Vercel deployment and rewrite rules
-├── package.json              # Backend dependencies
+├── routes/                   
+├── index.js                  
+├── vercel.json               
+├── package.json              
 └── README.md
 ---
 ⚙️ Configuration & Environment Setup
